@@ -34,7 +34,7 @@
             font-size: $font-size-zeta;
 
             @include mq($from: desktop) {
-                font-size: $font-size-base;
+                font-size: $font-size-beta;
             }
         }
 
@@ -45,8 +45,8 @@
             fill: $color-yellow;
 
             @include mq($from: desktop) {
-                width: 1.6rem;
-                height: 1.6rem;
+                width: 20px;
+                height: 20px;
             }
         }
 

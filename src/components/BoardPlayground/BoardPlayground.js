@@ -104,7 +104,6 @@ const BoardPlayground = ({width, height}) => {
         <div>
             <div className='c-result'>
                 {result}
-<<<<<<< HEAD
             </div>
             <div className='c-playground'>
                 {
@@ -135,37 +134,6 @@ const BoardPlayground = ({width, height}) => {
                     null
                 }
             </div>
-=======
-            </div>
-            
-            {
-                boardArr ?
-                boardArr.map((iItem, i) => {
-                    const widthItem = iItem.length;
-                    return iItem.map((jItem, j) => {
-                        const item = boardArr[i][j];
-                        const btnItem = `btn-${i}-${j}`;
-                        const eleItem = `element-${i}-${j}`;
-
-                        return (
-                            <div key={eleItem} className='c-playground'>
-                                <button
-                                    onClick={() => handleDispatch(i, j)}
-                                    key={btnItem}
-                                    className='c-playground__btn'
-                                >
-                                    {getText(item)}
-                                </button>
-                                { 
-                                    j === widthItem - 1 ? <br/> : null
-                                }
-                            </div>
-                        );
-                    })
-                }) :
-                null
-            }
->>>>>>> c6acd44ff57601143998641e86fca00c7100966d
         </div>
     )
 }

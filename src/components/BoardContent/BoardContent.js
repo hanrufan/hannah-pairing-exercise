@@ -113,8 +113,6 @@ const BoardContent = ({width, height, mines}) => {
             })
         });
 
-        console.log('@@!!neighborBoard', neighborBoard);
-
         return neighborBoard;
     };
 

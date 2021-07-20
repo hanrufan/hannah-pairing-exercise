@@ -98,10 +98,6 @@ const Main = () => {
             }
         </div>
     )
-}
+};
 
-Main.propTypes = {
-
-}
-
-export default Main
+export default Main;

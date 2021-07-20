@@ -1,0 +1,71 @@
+@import '../../App.scss'; 
+
+.hideNeighbour {
+    visibility: hidden;
+}
+
+.showNeighbour {
+    visibility: visible;
+    color: $color-white;
+}
+
+.c-playground {
+    // .c-playground__content
+    &__content {
+        display: inline;
+    }
+
+    // .c-playground__btn
+    &__btn {
+        width: 2rem;
+        height: 2rem;
+
+        @include mq($from: tablet) {
+            width: 3rem;
+            height: 3rem;
+        }
+
+        @include mq($from: desktop) {
+            width: 5rem;
+            height: 5rem;
+        }
+
+        span {
+            font-size: $font-size-zeta;
+
+            @include mq($from: desktop) {
+                font-size: $font-size-base;
+            }
+        }
+
+        svg {
+            width: .75rem;
+            height: .75rem;
+            stroke: $color-red;
+            fill: $color-yellow;
+
+            @include mq($from: desktop) {
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+        }
+
+        // .c-playground__btn--reveale
+        &--revealed {
+            color: $color-reveled-text;
+        }
+    }
+}
+
+.c-result {
+    color: $color-text;
+    font-size: $font-size-gamma;
+    margin: 1rem;
+    font-family: $font-family-title;
+    font-weight: $font-black;
+
+    @include mq($from: desktop) {
+        font-size: $font-size-alpha;
+        margin: 1.5rem;
+    }
+}

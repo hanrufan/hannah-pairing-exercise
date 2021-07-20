@@ -16,7 +16,6 @@ export const BoardContextProvider = ({ children }) => {
         state,
     ]);
 
-
     return (
         <BoardContext.Provider value={contextBoardVal}>
             {children}

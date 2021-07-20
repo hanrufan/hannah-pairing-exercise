@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import BoardContent from '../BoardContent';
 import { useBoardContext } from '../../context/BoardContext';
 import { RESETGAME } from '../../constants';
-import './Main.css';
+import './Main.scss';
 
 const Main = () => {
     const [width, setWidth] = useState(0);
@@ -74,7 +74,7 @@ const Main = () => {
                 (
                     <div className='c-input'>
                         <button
-                            className='c-input--btn c-input--btn-primary'
+                            className='c-button c-button--primary'
                             onClick={reset}>
                                 Reset Game
                         </button>
@@ -88,7 +88,7 @@ const Main = () => {
                 (
                     <div className='c-input'>
                         <button 
-                            className='c-input--btn c-input--btn-primary'
+                            className='c-button c-button--primary'
                             onClick={startGame} 
                             disabled={width === 0 || height === 0 || mines === 0}>
                                 Start Game

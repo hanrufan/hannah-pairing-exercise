@@ -1,0 +1,49 @@
+@import '../node_modules/sass-mq//mq';
+
+// Color
+$color-white:        #ffffff;
+$color-yellow:       #fffb0bab;
+$color-red:          #ff0000;
+$color-light-grey:   #cccccc;
+$color-grey:         #666666;
+$color-reveled-text: #4fa4b3;
+$color-text:         #2948d1;
+$color-border:       #bbbbbb;
+$color-primary:      #0099cc;
+$color-secondary:    #237e91;
+
+// Border
+$default-border: 1px solid $color-border;
+$hover-border:   1px solid $color-primary;
+
+// SASS-MQ Breakpoint configuration
+$mq-breakpoints: (
+    mobile: 320px,
+    iphone: 375px,
+    fablet: 480px,
+    tablet: 740px,
+    desktop: 980px,
+    wide: 1220px
+);
+
+// Font
+$font-size-alpha:   32px;
+$font-size-beta:    26px;
+$font-size-gamma:   20px;
+$font-size-delta:   18px;
+$font-size-base:    16px;
+$font-size-epsilon: 14px;
+$font-size-zeta:    12px;
+$font-size-eta:     9px;
+
+// Font Size
+$font-family-title: Arial, Helvetica, sans-serif;
+
+// Font weight
+$font-default: 500;
+$font-bold: 700;
+$font-black: 900;
+
+.c-root {
+    text-align: center; 
+}

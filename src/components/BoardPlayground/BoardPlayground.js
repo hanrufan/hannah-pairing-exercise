@@ -3,7 +3,7 @@ import { Frown } from 'react-feather';
 import { number } from 'prop-types';
 import { useBoardContext } from '../../context/BoardContext';
 import { CLICKBRICK, CLICKEMPTYBRICK } from '../../constants';
-import './BoardPlayground.css';
+import './BoardPlayground.scss';
 
 const BoardPlayground = ({width, height}) => {
     const { boardArr, result, displayAll, boardDispatch } = useBoardContext();
@@ -105,34 +105,35 @@ const BoardPlayground = ({width, height}) => {
             <div className='c-result'>
                 {result}
             </div>
-            
-            {
-                boardArr ?
-                boardArr.map((iItem, i) => {
-                    const widthItem = iItem.length;
-                    return iItem.map((jItem, j) => {
-                        const item = boardArr[i][j];
-                        const btnItem = `btn-${i}-${j}`;
-                        const eleItem = `element-${i}-${j}`;
+            <div className='c-playground'>
+                {
+                    boardArr ?
+                    boardArr.map((iItem, i) => {
+                        const widthItem = iItem.length;
+                        return iItem.map((jItem, j) => {
+                            const item = boardArr[i][j];
+                            const btnItem = `btn-${i}-${j}`;
+                            const eleItem = `element-${i}-${j}`;
 
-                        return (
-                            <div key={eleItem} className='c-playground'>
-                                <button
-                                    onClick={() => handleDispatch(i, j)}
-                                    key={btnItem}
-                                    className='c-playground__btn'
-                                >
-                                    {getText(item)}
-                                </button>
-                                { 
-                                    j === widthItem - 1 ? <br/> : null
-                                }
-                            </div>
-                        );
-                    })
-                }) :
-                null
-            }
+                            return (
+                                <div key={eleItem} className='c-playground__content'>
+                                    <button
+                                        onClick={() => handleDispatch(i, j)}
+                                        key={btnItem}
+                                        className='c-playground__btn'
+                                    >
+                                        {getText(item)}
+                                    </button>
+                                    { 
+                                        j === widthItem - 1 ? <br/> : null
+                                    }
+                                </div>
+                            );
+                        })
+                    }) :
+                    null
+                }
+            </div>
         </div>
     )
 }

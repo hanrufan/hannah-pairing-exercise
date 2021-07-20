@@ -5,13 +5,6 @@ import { useBoardContext } from '../../context/BoardContext';
 import { STARTGAME } from '../../constants';
 
 const BoardContent = ({width, height, mines}) => {
-    useEffect(() => {
-        boardDispatch({ 
-            type: STARTGAME,
-            board: startGame()
-        });
-    }, []);
-
     const  { boardDispatch } = useBoardContext();
 
     const getRandomPosition = num => {
@@ -115,6 +108,13 @@ const BoardContent = ({width, height, mines}) => {
 
         return neighborBoard;
     };
+
+    useEffect(() => {
+        boardDispatch({ 
+            type: STARTGAME,
+            board: startGame()
+        });
+    }, []);
 
     return (
         <BoardPlayground width={width} height={height}/>  

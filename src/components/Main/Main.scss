@@ -1,0 +1,57 @@
+@import '../../App.scss'; 
+
+.c-main {
+    margin: 2rem 10%;
+}
+
+.c-input {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+
+    //.c-input--label 
+    &--label {
+        display: block;
+        font-size: 1rem;
+        margin: auto .5rem;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    // .c-input--input 
+    &--input{
+        border: $default-border;
+        border-radius: 1.25rem;
+        padding: 0.75rem;
+        font-size: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.c-button {
+    padding: 0.75rem;
+    border-radius: 1.25rem;
+    border: $default-border;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.c-button--primary {
+    background-color: $color-primary;
+    color: $color-white;
+
+    &:hover {
+        border: $hover-border;
+        background-color: $color-secondary;
+        color: $color-white;
+    }
+
+    &:disabled,
+    [disabled] {
+        border: $default-border;
+        background-color: $color-light-grey;
+        color: $color-grey;
+    }
+}

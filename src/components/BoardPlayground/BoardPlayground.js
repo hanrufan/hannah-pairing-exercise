@@ -11,8 +11,8 @@ const BoardPlayground = ({width, height}) => {
     const emptyArea = (i, j, board) => {
         let checkArr = [];
 
-         // top left
-         if (i-1 > -1 && j-1 > -1) {
+        // top left
+        if (i-1 > -1 && j-1 > -1) {
             checkArr.push(board[i-1][j-1]);
         }
 

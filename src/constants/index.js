@@ -1,0 +1,4 @@
+export const STARTGAME = 'STARTGAME';
+export const CLICKBRICK = 'CLICKBRICK';
+export const CLICKEMPTYBRICK = 'CLICKEMPTYBRICK';
+export const RESETGAME = 'RESETGAME';

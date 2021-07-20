@@ -1,0 +1,53 @@
+.c-main {
+    margin: 2rem 10%;
+}
+
+.c-input {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem;
+}
+
+.c-input--label {
+    display: block;
+    font-size: 1rem;
+    margin: auto .5rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.c-input--input {
+    border: 0.0625rem solid #bbb;
+    border-radius: 1.25rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.c-input--btn {
+    padding: 0.75rem;
+    border-radius: 1.25rem;
+    border: 0.0625rem solid #bbb;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.c-input--btn-primary {
+    background-color: #0099cc;
+    color: #ffffff;
+}
+
+.c-input--btn-primary:hover {
+    border: 0.0625rem solid #0099cc;
+    background-color: #00aacc;
+    color: #ffffff;
+  }
+  
+.c-input--btn-primary:disabled,
+.c-input--btn-primary [disabled]{
+    border: 0.0625rem solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
